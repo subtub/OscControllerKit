@@ -1,0 +1,21 @@
+#Immersive Dataviz -- Controller Samples
+
+Liste der Controller:  
+- Nintendo Wii - Remote  
+- Nintendo Wii - Nunchuk  
+- PlayStation Move  
+- Apple Magic Trackpad  
+- 3DConnexion Spacenavigator  
+- iPhone/iPad - TouchOsc  
+- Gamepads  
+- Kinect
+
+
+TODO  
+- Diagramm / Flowchart  
+  (von wo kommt was und wohin soll es weitergeleitet werden.   
+  Controller -> Osculator -> Applicationsrechner oder Controller --> Applicationsrechner)  
+- Osculator Lizens (Sonst pausiert die App für ein paar sekunden und sendet/empfaengt nichts)  
+  http://www.osculator.net/purchase  
+  29 - 14eur  
+- Rechner für Osculator  (Mac mit Bluetooth und WiFi)  
