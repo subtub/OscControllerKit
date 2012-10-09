@@ -22,3 +22,4 @@ TODO
 
 ##Space Navigator Links##
 - [Simple example of connecting processing to a SpaceNavigator via OSCulator](https://gist.github.com/100144)
+- [OSCulator Space Navigator Manual](http://www.osculator.net/doc/manual:spacenavigator)
