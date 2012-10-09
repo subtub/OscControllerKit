@@ -20,6 +20,9 @@ TODO
   29 - 14eur  
 - Rechner für Osculator  (Mac mit Bluetooth und WiFi)  
 
+##WiiMote Links##
+- [OSCulator WiiMote Wiki](http://www.osculator.net/doc/faq:wiimote)
+
 ##Space Navigator Links##
 - [Simple example of connecting processing to a SpaceNavigator via OSCulator](https://gist.github.com/100144)
 - [OSCulator Space Navigator Manual](http://www.osculator.net/doc/manual:spacenavigator)
