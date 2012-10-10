@@ -1,4 +1,5 @@
-import wrongpowder.io.osc.wii.*;
+import de.fhpotsdam.io.osc.wii.*;
+import de.fhpotsdam.util.*;
 import oscP5.*;
 import netP5.*;
 
