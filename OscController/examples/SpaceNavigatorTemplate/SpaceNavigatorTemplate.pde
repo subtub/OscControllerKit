@@ -1,8 +1,17 @@
-import oscP5.*;
-import netP5.*;
+/**
+ * SpaceNavigatorTemplate
+ *
+ * This is a blank template explaining the usage of SpaceNavigatorOsc. 
+ */
 
+
+// OscController imports
 import de.fhpotsdam.io.osc.spacenavigator.*;
 import de.fhpotsdam.util.*;
+// OscP5 imports
+// download it here: http://www.sojamo.de/libraries/oscP5/
+import oscP5.*;
+import netP5.*;
 
 OscP5 oscP5;
 SpaceNavigatorOsc snOsc;
@@ -17,6 +26,11 @@ void setup(){
 
 void draw(){}
 
+/**
+ * This gets called whenever a button on the SpaceNavigator is pressed
+ * snNumber is the SpaceNavigator number, if there are more than one, 
+ * currently OSCulator only supports one. Button is either ONE or TWO.
+ */
 void snButtonPressed(int snNumber, SpaceNavigatorButton button){
   println("A buton has been pressed on SpaceNavigator#" + snNumber + ": " + button.toString());
   switch(button){
@@ -29,26 +43,19 @@ void snButtonPressed(int snNumber, SpaceNavigatorButton button){
   }
 }
 
-// There seems to be a problem with the drivers/OSCulator, wrong button presses all the time. 
-// Don't use it!
-void snButtonReleased(int snNumber, SpaceNavigatorButton button){
-  //println("A button has been released on SpaceNavigator#" + snNumber + ": " + button.toString());
-  switch(button){
-    case ONE:
-      // do something
-      break;
-    case TWO:
-      // do something
-      break;
-  }
-}
-
-
+/*
+ * This gets called when the SpaceNavigator has been translated / one axis has been moved. 
+ * Default values: 0.5/0.5/0.5
+ */
 void snTranslated(int snNumber, float x, float y, float z){
   println("SpaceNavigator#" + snNumber + " has been translated to " + x + "/" + y + "/" + z);
 }
 
 
+/*
+ * This gets called when the SpaceNavigator has been rotated around an axis.
+ * Default values: 0.5/0.5/0.5
+ */
 void snRotated(int snNumber, float x, float y, float z){
   println("SpaceNavigator#" + snNumber + " has been rotated to " + x + "/" + y + "/" + z);
 }
