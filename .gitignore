@@ -46,3 +46,5 @@ OscController/examples/Hello/.svn/all-wcprops
 OscController/distribution/OscController-1/examples/Hello/Hello.pde
 
 OscController/src/template/library/HelloLibrary.java
+
+*.class
