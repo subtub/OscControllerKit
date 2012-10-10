@@ -21,6 +21,7 @@ int PORT_NUMBER = 9000;
 void setup() {
   oscP5 = new OscP5(this, PORT_NUMBER);
   wiiOsc = new WiiOsc(this);
+  WiiButton button = WiiButton.A;
 }
 
 
@@ -43,8 +44,31 @@ void wiimoteButtonPressed(int wiiNumber, String button){
 }
 
 
+void wiimoteButtonReleased(int wiiNumber, String button){
+  println("Button released on Wii#" + wiiNumber + ", button: " + button);
+  if(button.equals(WiiOsc.UP)){}
+  else if(button.equals(WiiOsc.RIGHT)){}
+  else if(button.equals(WiiOsc.DOWN)){}
+  else if(button.equals(WiiOsc.LEFT)){}
+  else if(button.equals(WiiOsc.A)){}
+  else if(button.equals(WiiOsc.MINUS)){}
+  else if(button.equals(WiiOsc.HOME)){}
+  else if(button.equals(WiiOsc.PLUS)){}
+  else if(button.equals(WiiOsc.ONE)){}
+  else if(button.equals(WiiOsc.TWO)){}
+  else if(button.equals(WiiOsc.B)){}
+}
+
+
 void nunchukButtonPressed(int nunchukNumber, String button){
   println("Button pressed on Nunchuk#" + nunchukNumber + ", button: " + button);
+  if(button.equals(WiiOsc.C)){}
+  else if(button.equals(WiiOsc.Z)){}
+}
+
+
+void nunchukButtonReleased(int nunchukNumber, String button){
+  println("Button released on Nunchuk#" + nunchukNumber + ", button: " + button);
   if(button.equals(WiiOsc.C)){}
   else if(button.equals(WiiOsc.Z)){}
 }

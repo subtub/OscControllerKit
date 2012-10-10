@@ -1,11 +1,11 @@
+package wrongpowder.io.osc.WiiOsc;
+
 /**
- * Class WiiOSc tries to take away the need to parse the Osc Messages sent by OSCulator manually. 
+ * Class WiiOSc makes it easier to use Osc Messages sent by OSCulator. 
  * Using Java reflection, it will call functions in the main sketch like it is done on a normal key press.
  * 
  * @author Tim Pulver
  * @version 0.01
- *
- * TODO: Osc Messages are processed twice...!?!?!? Mayve because of localhost!?
  */
 
 import java.lang.reflect.Method;
@@ -13,7 +13,7 @@ import processing.core.PApplet;
 import oscP5.*;
 import netP5.*;
 
-class WiiOsc {
+public class WiiOsc {
   // osc address pattern strings
   private static String BUTTON = "button";
   private static String NUNCHUK = "nunchuk";
