@@ -8,7 +8,7 @@ package de.fhpotsdam.io.osc.spacenavigator;
  * @version 0.01
  */
 
-import java.lang.reflect.Method;
+//import java.lang.reflect.Method;
 import java.lang.Enum;
 
 import de.fhpotsdam.io.osc.spacenavigator.*;
@@ -89,11 +89,15 @@ public class SpaceNavigatorOsc {
 				reflection.invokeMethodWithParams(p,
 						SPACE_NAVIGATOR_BUTTON_PRESSED_FUNCTION,
 						getObjectArray(oscMessage), isnbParTypes);
+			}
+			// gets called all the time, useless right now
+			/*
 			} else if (value == 0.0) {
 				reflection.invokeMethodWithParams(p,
 						SPACE_NAVIGATOR_BUTTON_RELEASED_FUNCTION,
 						getObjectArray(oscMessage), isnbParTypes);
 			}
+			*/
 		}
 		// space navigator translation
 		else if (isTranslation) {
