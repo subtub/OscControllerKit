@@ -1,23 +1,26 @@
 /**
  * SpaceNavigatorTemplate
  *
- * This is a blank template explaining the usage of SpaceNavigatorOsc. 
+ * This is a template for using SpaceNavigator with OSCulator. 
+ *  
+ * For this to run, you need 
+ * - SpaceNavigator Controller (http://www.3dconnexion.com/products/spacenavigator.html)
+ * - oscP5 library (http://www.sojamo.de/libraries/oscP5/)
+ * - OSCulator - Mac only (http://www.osculator.net/)
+ * 
+ * For additional information have a look at the OSCulator SpaceNavigator manual: 
+ * http://www.osculator.net/doc/manual:spacenavigator
+ *
+ * Authors: Paul Vollmer, Tim Pulver
  */
 
-
-// OscController imports
 import de.fhpotsdam.io.osc.spacenavigator.*;
-import de.fhpotsdam.util.*;
-// OscP5 imports
-// download it here: http://www.sojamo.de/libraries/oscP5/
 import oscP5.*;
-import netP5.*;
 
 OscP5 oscP5;
 SpaceNavigatorOsc snOsc;
 
-// OSC output port of OSCulator
-int PORT_NUMBER = 9000;
+int PORT_NUMBER = 9000; // OSC output port of OSCulator
 
 void setup(){
   oscP5 = new OscP5(this, PORT_NUMBER);
@@ -44,7 +47,9 @@ void snButtonPressed(int snNumber, SpaceNavigatorButton button){
 }
 
 /*
- * This gets called when the SpaceNavigator has been translated / one axis has been moved. 
+ * This gets called when the SpaceNavigator has been translated / one axis has been moved.
+ * snNumber is the SpaceNavigator number, if there are more than one, 
+ * currently OSCulator only supports one. 
  * Default values: 0.5/0.5/0.5
  */
 void snTranslated(int snNumber, float x, float y, float z){
@@ -53,7 +58,8 @@ void snTranslated(int snNumber, float x, float y, float z){
 
 
 /*
- * This gets called when the SpaceNavigator has been rotated around an axis.
+ * This gets called when the SpaceNavigator has been rotated around an axis. * snNumber is the SpaceNavigator number, if there are more than one, 
+ * currently OSCulator only supports one.
  * Default values: 0.5/0.5/0.5
  */
 void snRotated(int snNumber, float x, float y, float z){
