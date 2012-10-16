@@ -10,9 +10,14 @@ package de.fhpotsdam.io.osc.wii;
 
 import java.lang.reflect.Method;
 import java.lang.Enum;
+import java.util.HashMap;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 import de.fhpotsdam.io.osc.wii.*;
-import de.fhpotsdam.util.Reflection;
+import de.fhpotsdam.util.*;
+import de.fhpotsdam.util.math.Conversion;
+import de.fhpotsdam.util.time.ThreadTimer;
 import processing.core.PApplet;
 import oscP5.*;
 import netP5.*;
@@ -41,9 +46,19 @@ public class WiiOsc {
   private static String F_TYPETAG = "f";
   private static String FF_TYPETAG = "ff";
   private static String FFFF_TYPETAG = "ffff";
+  
+  // if only one wii is in use, this wii-number will be used
+  private int defWiiNumber = 1;
 
   // parent sketch
   PApplet p;
+  
+  // for Osc sending
+  private NetAddress myRemoteLocation;
+  private String remoteIp;
+  private int remotePort;
+  private OscP5 oscP5;
+  
 
   // Class types for java reflection
   private Class[] isParTypes; // int, string
@@ -51,14 +66,22 @@ public class WiiOsc {
   private Class[] inbParTypes; // int, nunchukButton
   private Class[] iffParTypes; // int, float, float
   private Class[] iffffParTypes; // int, float, float, float, float
+  
+  // HashMap for timed vibration
+  private HashMap<Integer, ThreadTimer> timers;
+  
+  // Logging
+  private final static Logger LOGGER = Logger.getLogger(WiiOsc.class.getName());
 
   /**
    * Constructor of class WiiOsc
    * @param p The main PApplet, pass "this" from within Processing 
    */
   public WiiOsc(PApplet p) {
+	  LOGGER.log(Level.FINEST, "Constructor called");
     this.p = p;
     initParTypes();
+    timers = new HashMap<Integer, ThreadTimer>();
   }
 
 
@@ -69,6 +92,23 @@ public class WiiOsc {
   public boolean isWiiMessage(OscMessage oscMessage) {
     return oscMessage.addrPattern().indexOf("/wii/") != -1;
   } 
+  
+  
+  public void setRemote(OscP5 oscP5, String ip, int port){
+	  this.oscP5 = oscP5;
+	  this.remoteIp = ip;
+	  this.remotePort = port;
+	  myRemoteLocation = new NetAddress(ip, port);
+  }
+  
+  
+  /**
+   * If only one wii is in use, you can call led() and vibrate() withou adding the wii number. 
+   * The default wii number will be used instead. 
+   * @param defWiiNumber
+   */
+  private void setDefaultWiiNumber(int defWiiNumber){this.defWiiNumber = defWiiNumber;}
+  
 
   /**
    * Here we do most of the work, we check which osc message we received (button, sensor, joystick) 
@@ -211,6 +251,88 @@ public class WiiOsc {
     // add the wii number as first element in the array
     values[0] = getWiiNumber(oscMessage.addrPattern());
     return values;
+  }
+  
+  
+  /**
+   * Overloaded version of led(). 
+   * This an be used if there is only one wii (default wii number is 1). 
+   * @param led1
+   * @param led2
+   * @param led3
+   * @param led4
+   */
+  public void led(boolean led1, boolean led2, boolean led3, boolean led4){
+	  led(defWiiNumber, led1, led2, led3, led4);
+  }
+  
+  
+  /**
+   * Overloaded version of led(). 
+   * @param wiiNumber
+   * @param led1
+   * @param led2
+   * @param led3
+   * @param led4
+   */
+  public void led(int wiiNumber, boolean led1, boolean led2, boolean led3, boolean led4){
+	  // we need to reverse the order of the led booleans and convert it to decimal
+	  int revHexValue = Conversion.getInstance().boolArrayToDec(new boolean[] {led4, led3, led2, led1});
+	  led(wiiNumber, revHexValue);
+  }
+  
+  
+  
+  public void led(int wiiNumber, int decVal){
+	  if(myRemoteLocation == null){
+		  System.err.println("you need to call setRemote() before sending messages. "
+				  + "if you want to send messages on the same machine, use 127.0.0.1 and the osc-imput-port");
+	  }
+	  OscMessage message = new OscMessage("/wii/" + wiiNumber + "/led/");
+	  message.add(decVal);
+	  oscP5.send(message, myRemoteLocation);
+  }
+  
+  
+  public void vibrate(int wiiNumber, boolean b){
+	  if(myRemoteLocation == null){
+		  LOGGER.log(Level.WARNING, "you need to call setRemote() before sending messages. "
+				  + "if you want to send messages on the same machine, use 127.0.0.1 and the osc-imput-port");
+	  }
+	  OscMessage message = new OscMessage("/wii/" + wiiNumber + "/vibrate/");
+	  message.add(b ? 1.0 : 0.0);
+	  oscP5.send(message, myRemoteLocation);
+  }
+  
+  
+  /**
+   * Creates a new thread, which terminates, when the time is over. 
+   * @param wiiNumber
+   * @param millis
+   */
+  public void vibrateForMillis(int wiiNumber, int millis){
+	  vibrate(wiiNumber, true);
+	  ThreadTimer timer = timers.get(wiiNumber); 
+	  if(timer == null){
+		  LOGGER.log(Level.FINE, "Creating new Timer");
+		  timer = new VibrationTimer(this, millis, wiiNumber);
+		  timers.put(wiiNumber, timer);
+		  timer.start();
+	  }
+	  else{
+		  LOGGER.log(Level.FINE, "Resetting timer");
+		  timer = timers.get(wiiNumber);
+		  timer.reset();
+	  }
+  }
+  
+  
+  /**
+   * Overloaded version of vibrate(), will use default wii number
+   * @param b True: vibration on, false: vibration off
+   */
+  public void vibrate(boolean b){
+	  vibrate(defWiiNumber, b);
   }
 
 

@@ -29,7 +29,7 @@ public class Reflection {
 	 *            [] Contains the classes of the arguments to pass, as params is
 	 *            of type object, we need this, too
 	 */
-	public static void invokeMethodWithParams(Object o, String m,
+	public void invokeMethodWithParams(Object o, String m,
 			Object[] params, Class[] parTypes) {
 		if (o == null || m == "" || m == null) {
 			System.err.println("invokeMethodWithParams(): There was an error with your arguments");
