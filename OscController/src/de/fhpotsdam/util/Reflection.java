@@ -40,7 +40,7 @@ public class Reflection {
 			Method method = c.getDeclaredMethod(m, parTypes);
 			method.invoke(o, params);
 		} catch (Throwable e) {
-			System.err.println(e);
+			//System.err.println(e);
 		}
 	}
 }
