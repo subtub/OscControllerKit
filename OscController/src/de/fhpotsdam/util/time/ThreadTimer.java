@@ -33,6 +33,7 @@ public abstract class ThreadTimer extends Thread{
 		run();
 	}
 	
+	
 	public void run(){
 		while(System.currentTimeMillis() < stopMillis){
 			try {
