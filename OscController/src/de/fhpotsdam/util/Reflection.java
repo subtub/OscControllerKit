@@ -1,5 +1,6 @@
 package de.fhpotsdam.util;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class Reflection {
@@ -35,12 +36,26 @@ public class Reflection {
 			System.err.println("invokeMethodWithParams(): There was an error with your arguments");
 			return;
 		}
-		try {
 			Class c = o.getClass();
-			Method method = c.getDeclaredMethod(m, parTypes);
-			method.invoke(o, params);
-		} catch (Throwable e) {
-			//System.err.println(e);
-		}
+			Method method = null;
+			try {
+				method = c.getDeclaredMethod(m, parTypes);
+			} catch (SecurityException e) {
+				e.printStackTrace();
+			} catch (NoSuchMethodException e) {
+				// let's ignore this
+				//e.printStackTrace();
+			}
+			if(method != null){
+				try {
+					method.invoke(o, params);
+				} catch (IllegalArgumentException e) {
+					e.printStackTrace();
+				} catch (IllegalAccessException e) {
+					e.printStackTrace();
+				} catch (InvocationTargetException e) {
+					e.printStackTrace();
+				}
+			}
 	}
 }
