@@ -29,7 +29,7 @@ void setup() {
 void draw() {}
 
 
-void wiimoteButtonPressed(int wiiNumber, WiiButton button){
+public void wiimoteButtonPressed(int wiiNumber, WiiButton button){
   println("Button pressed on Wii#" + wiiNumber + ", button: " + button);
   switch(button){
   	case UP:
@@ -69,7 +69,7 @@ void wiimoteButtonPressed(int wiiNumber, WiiButton button){
 }
 
 
-void wiimoteButtonReleased(int wiiNumber, WiiButton button){
+public void wiimoteButtonReleased(int wiiNumber, WiiButton button){
   println("Button released on Wii#" + wiiNumber + ", button: " + button);
   switch(button){
   	case UP:
@@ -109,7 +109,7 @@ void wiimoteButtonReleased(int wiiNumber, WiiButton button){
 }
 
 
-void nunchukButtonPressed(int nunchukNumber, NunchukButton button){
+public void nunchukButtonPressed(int nunchukNumber, NunchukButton button){
   println("Button pressed on Nunchuk#" + nunchukNumber + ", button: " + button);
   switch(button){
   	case C:
@@ -122,7 +122,7 @@ void nunchukButtonPressed(int nunchukNumber, NunchukButton button){
 }
 
 
-void nunchukButtonReleased(int nunchukNumber, NunchukButton button){
+public void nunchukButtonReleased(int nunchukNumber, NunchukButton button){
   println("Button released on Nunchuk#" + nunchukNumber + ", button: " + button);
   switch(button){
   	case C:
@@ -138,7 +138,7 @@ void nunchukButtonReleased(int nunchukNumber, NunchukButton button){
  * To see what's the differencne between pitch, roll, yaw and accel, have a look here:
  * http://www.osculator.net/doc/faq:wiimote (-> "What are Pitch, Yaw, and Roll?")
  */
-void wiimoteSensorChanged(int wiiNumber, float pitch, float roll, float yaw, float accel){
+public void wiimoteSensorChanged(int wiiNumber, float pitch, float roll, float yaw, float accel){
   //println("Sensor data changed on Wii#" + wiiNumber + ", pitch: " + pitch + ", roll: " + roll + ", yaw: " + yaw + ", accel: " + accel);
 }
 
@@ -146,12 +146,12 @@ void wiimoteSensorChanged(int wiiNumber, float pitch, float roll, float yaw, flo
  * To see what's the differencne between pitch, roll, yaw and accel, have a look here:
  * http://www.osculator.net/doc/faq:wiimote (-> "What are Pitch, Yaw, and Roll?")
  */
-void nunchukSensorChanged(int nunchukNumber, float pitch, float roll, float yaw, float accel){
+public void nunchukSensorChanged(int nunchukNumber, float pitch, float roll, float yaw, float accel){
   //println("Sensor data changed on Nunchuk#" + nunchukNumber + ", pitch: " + pitch + ", roll: " + roll + ", yaw: " + yaw + ", accel: " + accel);
 }
 
 
-void nunchukJoystickChanged(int nunchukNumber, float x, float y){
+public void nunchukJoystickChanged(int nunchukNumber, float x, float y){
   //println("Joystick changed on Nunchuk#" + nunchukNumber + ", x: " + x + ", y: " + y);
 }
 
