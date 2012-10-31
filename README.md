@@ -1,9 +1,9 @@
 #Immersive Dataviz -- Controller Samples
   
 GitHub Projekt Page:  
-http://wrongentertainment.github.com/ControllerExamples/  
+http://wrongentertainment.github.com/OscControllerKit/  
 Präsentation:  
-http://wrongentertainment.github.com/ControllerExamples/Presentation  
+http://wrongentertainment.github.com/OscControllerKit/Presentation  
   
 Liste der Controller:  
 - Nintendo Wii - Remote  
