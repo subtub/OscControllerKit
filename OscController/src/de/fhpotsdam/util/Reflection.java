@@ -51,6 +51,7 @@ public class Reflection {
 					method.invoke(o, params);
 				} catch (IllegalArgumentException e) {
 					e.printStackTrace();
+					System.out.println("Try putting \"public\" before the functions");
 				} catch (IllegalAccessException e) {
 					e.printStackTrace();
 				} catch (InvocationTargetException e) {
