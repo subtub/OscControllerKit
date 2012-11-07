@@ -12,6 +12,11 @@
  * For additional information have a look at the OSCulator SpaceNavigator manual: 
  * http://www.osculator.net/doc/manual:spacenavigator
  *
+ * OSCulator currently supports only one SpaceNavigator, so snNumber will be 1.
+ *
+ * Please note, that there is no button released function, because the SpaceNavigator sends
+ * false positives all the time.
+ *
  * Authors: Paul Vollmer, Tim Pulver
  */
 
@@ -53,8 +58,9 @@ void draw(){
 
 /**
  * This gets called whenever a button on the SpaceNavigator is pressed
- * snNumber is the SpaceNavigator number, if there are more than one, 
- * currently OSCulator only supports one. Button is either ONE or TWO.
+ *
+ * snNumber: The SpaceNavigator number
+ * button: Either ONE or TWO.
  */
 void snButtonPressed(int snNumber, SpaceNavigatorButton button){
   switch(button){
@@ -69,8 +75,10 @@ void snButtonPressed(int snNumber, SpaceNavigatorButton button){
 
 /*
  * This gets called when the SpaceNavigator has been translated / one axis has been moved.
- * snNumber is the SpaceNavigator number, if there are more than one, 
- * currently OSCulator only supports one. 
+ * x, y and z are in the range [0..1]
+ *
+ * snNumber: The SpaceNavigator number 
+ * 
  * Default values: 0.5/0.5/0.5
  */
 void snTranslated(int snNumber, float x, float y, float z){
@@ -83,8 +91,10 @@ void snTranslated(int snNumber, float x, float y, float z){
 
 /*
  * This gets called when the SpaceNavigator has been rotated around an axis.
- * snNumber is the SpaceNavigator number, if there are more than one, 
- * currently OSCulator only supports one.
+ * x, y and z are in the range [0..1]
+ *
+ * snNumber: The SpaceNavigator number 
+ *
  * Default values: 0.5/0.5/0.5
  */
 void snRotated(int snNumber, float x, float y, float z){
@@ -101,6 +111,7 @@ void snRotated(int snNumber, float x, float y, float z){
  * the functions on top are automatically called.  
  */
 void oscEvent(OscMessage theOscMessage) {
+	//println("Incoming OSC message");
   if(snOsc.isSpaceNavigatorMessage(theOscMessage)){
     snOsc.process(theOscMessage);
   }
