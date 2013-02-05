@@ -174,13 +174,17 @@ import netP5.*;
 			sParTypes[0] = new String().getClass();
 			sffffParTypes = new Class[5];
 			sffffParTypes[0] = new String().getClass();
-			sffffPartTypes[i]
-			// integer, float, float, float
+			for(int i=1; i<5; i++){
+				sffffParTypes[i] = Integer.TYPE;
+			}
+			// integer, float, float, float (TODO is this being used??)
+			/*
 			ifffParTypes = new Class[4];
 			ifffParTypes[0] = Integer.TYPE;
 			for (int i = 1; i < ifffParTypes.length; i++) {
 				ifffParTypes[i] = Float.TYPE;
 			}
+			*/
 		}
 		
 
