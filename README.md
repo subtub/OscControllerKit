@@ -8,19 +8,19 @@ GitHub project page:
 Presentation:  
 [subtub.github.com/OscControllerKit/Presentation](http://subtub.github.com/OscControllerKit/Presentation)  
 
-### Supported Controllers
+##Supported Controllers
 - WiiMote / Wii Remote Wii Nunchuk
 - 3Dconnexion SpaceNavigator
 
-### Installation
+## Installation
 Download the latest release from [sourceforge](https://sourceforge.net/projects/osckit/files/) and install it like described here: [How to install a contributed library](http://wiki.processing.org/w/How_to_Install_a_Contributed_Library)
 
-### Controller usage
+## Controller usage
 
-#### WiiMote
+### WiiMote
 For using a WiiMote with OscControllerKit, you need [OSCulator](http://www.osculator.net) first. Have a look at the [OSCulator WiiMote Wiki](http://www.osculator.net/doc/faq:wiimote) on how to set up OSCulator correctly. 
 
-#### Space Navigator
+### Space Navigator
 - [Simple example of connecting processing to a SpaceNavigator via OSCulator](https://gist.github.com/100144)
 - [OSCulator Space Navigator Manual](http://www.osculator.net/doc/manual:spacenavigator)
 
