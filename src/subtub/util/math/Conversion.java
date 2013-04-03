@@ -1,6 +1,6 @@
 //
 // Conversion.java
-// OscControllerKit (v.##library.prettyVersion##) is released under the MIT License.
+// OscControllerKit (v##library.prettyVersion##) is released under the MIT License.
 //
 // Copyright (c) 2012, Tim Pulver & Paul Vollmer http://www.fh-potsdam.de
 //
@@ -23,7 +23,7 @@
 // THE SOFTWARE.
 //
 
-package de.fhpotsdam.util.math;
+package subtub.util.math;
 
 public class Conversion {
 	private static Conversion instance;

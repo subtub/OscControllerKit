@@ -1,6 +1,6 @@
 //
 // VibrationTimer.java
-// OscControllerKit (v.##library.prettyVersion##) is released under the MIT License.
+// OscControllerKit (v##library.prettyVersion##) is released under the MIT License.
 //
 // Copyright (c) 2012, Tim Pulver & Paul Vollmer http://www.fh-potsdam.de
 //
@@ -23,9 +23,9 @@
 // THE SOFTWARE.
 //
 
-package de.fhpotsdam.io.osc.wii;
+package subtub.io.osc.wii;
 
-import de.fhpotsdam.util.time.ThreadTimer;
+import subtub.util.time.ThreadTimer;
 
 public class VibrationTimer extends ThreadTimer {
 	public VibrationTimer(WiiOsc wiiOsc, int millis, int wiiNumber) {

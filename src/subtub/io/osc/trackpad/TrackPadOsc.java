@@ -1,6 +1,6 @@
 //
 // TrackPadOsc.java
-// OscControllerKit (v.##library.prettyVersion##) is released under the MIT License.
+// OscControllerKit (v##library.prettyVersion##) is released under the MIT License.
 //
 // Copyright (c) 2012, Tim Pulver & Paul Vollmer http://www.fh-potsdam.de
 //
@@ -23,7 +23,7 @@
 // THE SOFTWARE.
 //
 
-package de.fhpotsdam.io.osc.trackpad;
+package subtub.io.osc.trackpad;
 
 /**
  * Class TrackPadOsc makes it easier to use Osc Messages sent by MultitouchPadOsc.
@@ -38,8 +38,8 @@ package de.fhpotsdam.io.osc.trackpad;
 //import java.lang.reflect.Method;
 import java.lang.Enum;
 
-import de.fhpotsdam.io.osc.trackpad.*;
-import de.fhpotsdam.util.Reflection;
+import subtub.io.osc.trackpad.*;
+import subtub.util.Reflection;
 import processing.core.PApplet;
 import oscP5.*;
 import netP5.*;

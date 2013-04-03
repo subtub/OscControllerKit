@@ -1,6 +1,6 @@
 //
 // WiiOsc.java
-// OscControllerKit (v.##library.prettyVersion##) is released under the MIT License.
+// OscControllerKit (v##library.prettyVersion##) is released under the MIT License.
 //
 // Copyright (c) 2012, Tim Pulver & Paul Vollmer http://www.fh-potsdam.de
 //
@@ -23,7 +23,7 @@
 // THE SOFTWARE.
 //
 
-package de.fhpotsdam.io.osc.wii;
+package subtub.io.osc.wii;
 
 /**
  * Class WiiOSc makes it easier to use Osc Messages sent by OSCulator. 
@@ -39,10 +39,10 @@ import java.util.HashMap;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
-import de.fhpotsdam.io.osc.wii.*;
-import de.fhpotsdam.util.*;
-import de.fhpotsdam.util.math.Conversion;
-import de.fhpotsdam.util.time.ThreadTimer;
+import subtub.io.osc.wii.*;
+import subtub.util.*;
+import subtub.util.math.Conversion;
+import subtub.util.time.ThreadTimer;
 import processing.core.PApplet;
 import oscP5.*;
 import netP5.*;

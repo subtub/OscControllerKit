@@ -1,6 +1,6 @@
 //
 // Reflection.java
-// OscControllerKit (v.##library.prettyVersion##) is released under the MIT License.
+// OscControllerKit (v##library.prettyVersion##) is released under the MIT License.
 //
 // Copyright (c) 2012, Tim Pulver & Paul Vollmer http://www.fh-potsdam.de
 //
@@ -23,7 +23,7 @@
 // THE SOFTWARE.
 //
 
-package de.fhpotsdam.util;
+package subtub.util;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

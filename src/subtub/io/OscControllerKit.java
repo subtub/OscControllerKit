@@ -1,6 +1,6 @@
 //
 // OscControllerKit.java
-// OscControllerKit (v.##library.prettyVersion##) is released under the MIT License.
+// OscControllerKit (v##library.prettyVersion##) is released under the MIT License.
 //
 // Copyright (c) 2012, Tim Pulver & Paul Vollmer http://www.fh-potsdam.de
 //
@@ -23,10 +23,10 @@
 // THE SOFTWARE.
 //
 
-package de.fhpotsdam.io;
+package subtub.io;
 
-import de.fhpotsdam.io.osc.wii.WiiOsc;
-import de.fhpotsdam.util.Reflection;
+import subtub.io.osc.wii.WiiOsc;
+import subtub.util.Reflection;
 
 public class OscControllerKit {
 	WiiOsc wiiOsc;

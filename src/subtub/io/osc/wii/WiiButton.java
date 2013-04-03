@@ -1,6 +1,6 @@
 //
 // WiiButton.java
-// OscControllerKit (v.##library.prettyVersion##) is released under the MIT License.
+// OscControllerKit (v##library.prettyVersion##) is released under the MIT License.
 //
 // Copyright (c) 2012, Tim Pulver & Paul Vollmer http://www.fh-potsdam.de
 //
@@ -23,7 +23,7 @@
 // THE SOFTWARE.
 //
 
-package de.fhpotsdam.io.osc.wii;
+package subtub.io.osc.wii;
 
 import java.lang.Enum;
 

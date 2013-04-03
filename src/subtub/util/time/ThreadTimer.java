@@ -1,6 +1,6 @@
 //
 // ThreadTimer.java
-// OscControllerKit (v.##library.prettyVersion##) is released under the MIT License.
+// OscControllerKit (v##library.prettyVersion##) is released under the MIT License.
 //
 // Copyright (c) 2012, Tim Pulver & Paul Vollmer http://www.fh-potsdam.de
 //
@@ -23,7 +23,7 @@
 // THE SOFTWARE.
 //
 
-package de.fhpotsdam.util.time;
+package subtub.util.time;
 
 /**
  * This thread runs for a certain period of time, calls timeOver(), and terminates,

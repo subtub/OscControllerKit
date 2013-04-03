@@ -1,6 +1,6 @@
 //
 // SpaceNavigatorButton.java
-// OscControllerKit (v.##library.prettyVersion##) is released under the MIT License.
+// OscControllerKit (v##library.prettyVersion##) is released under the MIT License.
 //
 // Copyright (c) 2012, Tim Pulver & Paul Vollmer http://www.fh-potsdam.de
 //
@@ -23,7 +23,7 @@
 // THE SOFTWARE.
 //
 
-package de.fhpotsdam.io.osc.spacenavigator;
+package subtub.io.osc.spacenavigator;
 
 import java.lang.Enum;
 
