@@ -77,7 +77,7 @@ Yay, everything works!
   - Gamepads  
 
 ## Contributors  
-[Paul Vollmer](http://wrong-entertainment.com)
+[Paul Vollmer](http://wrong-entertainment.com)  
 [Tim Pulver](http://timpulver.de)
 
 ## Donations
