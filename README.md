@@ -68,5 +68,8 @@ For a full reference, have a look at the [Javadocs](LINK ZU DEN JAVADOCS HIIIIII
 [Paul Vollmer](http://wrong-entertainment.com)
 [Tim Pulver](http://timpulver.de)
 
+## Donations
+If you like what we are doing here, you can support us with a tip on [GitTip](https://www.gittip.com/sub_tub/).
+
 ## License  
 OscControllerKit is released under the MIT License: http://www.opensource.org/licenses/MIT    
