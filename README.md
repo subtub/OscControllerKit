@@ -25,7 +25,7 @@ Now upen up the WiiTemplate example and press some buttons. You should see a con
 Yay, everything works!
 
 #### Functions
-For a full reference, have a look at the [Javadocs](LINK ZU DEN JAVADOCS HIIIIIIER).
+For a full reference, have a look at the [Javadocs](http://subtub.github.com/OscControllerKit/reference/index.html).
 
 ##### Button imput
 `void wiimoteButtonPressed(int wiiNumber, WiiButton button)`
