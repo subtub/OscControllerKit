@@ -1,7 +1,6 @@
-de.fhpotsdam.io
-de.fhpotsdam.io.osc.spacenavigator
-de.fhpotsdam.io.osc.trackpad
-de.fhpotsdam.io.osc.wii
-de.fhpotsdam.util
-de.fhpotsdam.util.math
-de.fhpotsdam.util.time
+subtub.io
+subtub.io.osc.spacenavigator
+subtub.io.osc.wii
+subtub.util
+subtub.util.math
+subtub.util.time

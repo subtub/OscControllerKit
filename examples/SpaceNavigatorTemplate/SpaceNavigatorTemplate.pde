@@ -19,7 +19,7 @@
  * Authors: Paul Vollmer, Tim Pulver
  */
 
-import de.fhpotsdam.io.osc.spacenavigator.*;
+import subtub.io.osc.spacenavigator.*;
 import oscP5.*;
 
 OscP5 oscP5;
@@ -27,12 +27,15 @@ SpaceNavigatorOsc snOsc;
 
 int PORT_NUMBER = 9000; // OSC output port of OSCulator
 
+
 void setup(){
   oscP5 = new OscP5(this, PORT_NUMBER);
   snOsc = new SpaceNavigatorOsc(this);
 }
 
+
 void draw(){}
+
 
 /**
  * This gets called whenever a button on the SpaceNavigator is pressed
@@ -51,6 +54,7 @@ void snButtonPressed(int snNumber, SpaceNavigatorButton button){
       break;
   }
 }
+
 
 /*
  * This gets called when the SpaceNavigator has been translated / one axis has been moved.
