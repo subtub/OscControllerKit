@@ -19,7 +19,7 @@ Download the latest release from [sourceforge](https://sourceforge.net/projects/
 
 ### WiiMote
 For using a WiiMote with OscControllerKit, you need [OSCulator](http://www.osculator.net) first. Open the file **WiiMote_Osculator.oscd** from the `examples/WiiTemplate` folder in OSCulator and test if the WiiMote signals are coming in. If you are having problems connnecting the WiiMote(s), have a look at the [OSCulator WiiMote Wiki](http://www.osculator.net/doc/faq:wiimote) on how to set up OSCulator correctly. 
-If everything is working correctly pressing a button on the WiiMote should result in a green status icon flashing up next to the message button name. If you see a yellow icon, it means that a signal is coming in but OSCulator does not forward it to a remote destination.
+If everything is working correctly pressing a button on the WiiMote should result in a green status icon flashing up next to the message name. If you see a yellow icon, it means that a signal is coming in but OSCulator does not forward it to a remote destination.
 Now upen up the WiiTemplate example and press some buttons. You should see a console message like this now: `Button pressed on Wii#1, button: " A`.  
 Yay, everything works!
 
@@ -47,8 +47,19 @@ For a full reference, have a look at the [Javadocs](LINK ZU DEN JAVADOCS HIIIIII
 `void vibrateForMillis(int wiiNumber, int millis)`
 
 ### Space Navigator
-- [Simple example of connecting processing to a SpaceNavigator via OSCulator](https://gist.github.com/100144)
-- [OSCulator Space Navigator Manual](http://www.osculator.net/doc/manual:spacenavigator)
+For using a SpaceNavigator with OscControllerKit, you need [OSCulator](http://www.osculator.net) first. Open the file **SpaceNavigator_Osculator.oscd** from the `examples/SpaceNavigatorTemplate` folder in OSCulator and test if the SpaceNavigator signals are coming in. If you are having problems connnecting the SpaceNavigator, have a look at the [OSCulator SpaceNavigator Wiki](http://www.osculator.net/doc/manual:spacenavigator) on how to set up OSCulator correctly. 
+If everything is working correctly pressing a button on the SpaceNavigator should result in a green status icon flashing up next to the message name. If you see a yellow icon, it means that a signal is coming in but OSCulator does not forward it to a remote destination.
+Now upen up the SpaceNavigatorTemplate example and press some buttons. You should see a console message like this now: `Button pressed on SpaceNavigator#1, button: " A`.  
+Yay, everything works!
+ 
+#### Functions
+
+#####Button input
+`void snButtonPressed(int snNumber, SpaceNavigatorButton button)`
+
+##### Sensor input
+`void snTranslated(int snNumber, float x, float y, float z)`
+`void snRotated(int snNumber, float x, float y, float z)`
 
 ## Changelog  
 **0.1.1**  
