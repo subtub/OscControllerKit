@@ -3,9 +3,9 @@
 ## General Information  
 OscControllerKit simplifies the usage of certain controllers in your [Processing](processing.org) projects. It depends on [oscP5](http://www.sojamo.de/libraries/oscP5/) and [OSCulator](http://www.osculator.net), a Mac OS X application, which forwards controller data via [OSC (Open Sound Control)](http://opensoundcontrol.org/introduction-osc). OscContollerKit uses the OSC signals sent by OSCulator and adds an event layer similar to the Processing syntax.
 
-GitHub project page:  
+**GitHub project page:**  
 [subtub.github.com/OscControllerKit](http://subtub.github.com/OscControllerKit)    
-Presentation:  
+**Presentation:**  
 [subtub.github.com/OscControllerKit/Presentation](http://subtub.github.com/OscControllerKit/Presentation)  
 
 ##Supported Controllers
