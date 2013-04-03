@@ -1,4 +1,4 @@
-#Immersive Dataviz -- Controller Samples
+# OscControllerKit  
   
 GitHub Projekt Page:  
 [subtub.github.com/OscControllerKit](http://subtub.github.com/OscControllerKit)    
