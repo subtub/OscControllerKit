@@ -7,7 +7,7 @@ package de.fhpotsdam.io.osc.trackpad;
  * <a href="http://wrongentertainment.github.com/MultitouchPadOsc">MultitouchPadOsc</a>
  * 
  * @author Tim Pulver
- * @version 0.01
+ * @version 0.1.1
  */
 
 //import java.lang.reflect.Method;
