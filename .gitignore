@@ -1,14 +1,10 @@
-OscController/distribution/
-
+# GENERAL FILES
 *.DS_Store
+
+# COMPILED FILES
+OscController/distribution/
 *.svn-base
 *.class
-
 *.svn
 
-OscController/examples/Hello/Hello.pde
-
-OscController/distribution/OscController-1/examples/Hello/Hello.pde
-
-OscController/src/template/library/HelloLibrary.java
-
+.metadata/
