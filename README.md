@@ -58,8 +58,8 @@ Yay, everything works!
 `void snButtonPressed(int snNumber, SpaceNavigatorButton button)`
 
 ##### Sensor input
-`void snTranslated(int snNumber, float x, float y, float z)`
-`void snRotated(int snNumber, float x, float y, float z)`
+`void snTranslated(int snNumber, float x, float y, float z)`  
+`void snRotated(int snNumber, float x, float y, float z)`  
 
 ## Changelog  
 **0.1.1**  
