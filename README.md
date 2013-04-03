@@ -20,7 +20,7 @@ Download the latest release from [sourceforge](https://sourceforge.net/projects/
 ### WiiMote
 For using a WiiMote with OscControllerKit, you need [OSCulator](http://www.osculator.net) first. Open the file **WiiMote_Osculator.oscd** from the `examples/WiiTemplate` folder in OSCulator and test if the WiiMote signals are coming in. If you are having problems connnecting the WiiMote(s), have a look at the [OSCulator WiiMote Wiki](http://www.osculator.net/doc/faq:wiimote) on how to set up OSCulator correctly. 
 If everything is working correctly pressing a button on the WiiMote should result in a green status icon flashing up next to the message button name. If you see a yellow icon, it means that a signal is coming in but OSCulator does not forward it to a remote destination.
-Now upen up the WiiTemplate example and press some buttons. You should see something like this now (console message): `Button pressed on Wii#1, button: " A`.  
+Now upen up the WiiTemplate example and press some buttons. You should see a console message like this now: `Button pressed on Wii#1, button: " A`.  
 Yay, everything works!
 
 #### Functions
