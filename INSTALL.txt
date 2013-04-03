@@ -1,4 +1,4 @@
-How to install library OscController
+How to install library OscControllerKit
 
 
 Install with the "Add Library..." tool
@@ -26,19 +26,19 @@ By default the following locations are used for your sketchbook folder:
   For Windows users, the sketchbook folder is located inside 
     'My Documents'/Processing.
 
-The folder structure for library OscController should be as follows:
+The folder structure for library OscControllerKit should be as follows:
 
 Processing
   libraries
-    OscController
+    OscControllerKit
       examples
       library
-        OscController.jar
+        OscControllerKit.jar
       reference
       src
                       
 Some folders like "examples" or "src" might be missing. After library 
-OscController has been successfully installed, restart the Processing 
+OscControllerKit has been successfully installed, restart the Processing 
 application.
 
 
