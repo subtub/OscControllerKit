@@ -14,7 +14,7 @@ Presentation:
 
 ## Installation
 Make sure [oscP5](http://www.sojamo.de/libraries/oscP5/) and [OSCulator](http://www.osculator.net) are installed!  
-Download the latest release from [sourceforge](https://sourceforge.net/projects/osckit/files/) and install it like described here: [How to install a contributed library](http://wiki.processing.org/w/How_to_Install_a_Contributed_Library)
+Download the [latest release](https://sourceforge.net/projects/osckit/files/) of OscControllerKit and install it like described here: [How to install a contributed library](http://wiki.processing.org/w/How_to_Install_a_Contributed_Library)
 
 ## Controller usage
 
