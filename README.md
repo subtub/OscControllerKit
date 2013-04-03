@@ -17,6 +17,7 @@ Make sure [oscP5](http://www.sojamo.de/libraries/oscP5/) and [OSCulator](http://
 Download the [latest release](https://sourceforge.net/projects/osckit/files/) of OscControllerKit and install it like described here: [How to install a contributed library](http://wiki.processing.org/w/How_to_Install_a_Contributed_Library)
 
 ## Controller usage
+For a full reference, have a look at the [Javadocs](http://subtub.github.com/OscControllerKit/reference/index.html).
 
 ### WiiMote
 For using a WiiMote with OscControllerKit, you need [OSCulator](http://www.osculator.net) first. Open the file **WiiMote_Osculator.oscd** from the `examples/WiiTemplate` folder in OSCulator and test if the WiiMote signals are coming in. If you are having problems connnecting the WiiMote(s), have a look at the [OSCulator WiiMote Wiki](http://www.osculator.net/doc/faq:wiimote) on how to set up OSCulator correctly. 
@@ -25,7 +26,6 @@ Now upen up the WiiTemplate example and press some buttons. You should see a con
 Yay, everything works!
 
 #### Functions
-For a full reference, have a look at the [Javadocs](http://subtub.github.com/OscControllerKit/reference/index.html).
 
 ##### Button imput
 `void wiimoteButtonPressed(int wiiNumber, WiiButton button)`
