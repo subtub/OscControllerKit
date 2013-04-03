@@ -1,0 +1,3 @@
+[submodule "web/subtub.media"]
+	path = web/subtub.media
+	url = git@github.com:subtub/subtub.media.git
