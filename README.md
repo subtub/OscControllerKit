@@ -32,7 +32,7 @@ For using a WiiMote with OscControllerKit, you need [OSCulator](http://www.oscul
 ## Future Ideas
 - Add support for more controllers
   - PlayStation Move ([GitHub Repo for PS Move SDK here](https://github.com/thp/psmoveapi))  
-  - Apple Magic Trackpad  
+  - Apple Magic Trackpad (via [MultitouchPadOsc](https://github.com/wrongentertainment/MultitouchPadOsc/)) 
   - iPhone/iPad - TouchOsc  
   - Gamepads  
 
