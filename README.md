@@ -14,16 +14,7 @@ Liste der Controller:
 - iPhone/iPad - TouchOsc  
 - Gamepads  
 - Kinect
-
-
-TODO  
-- Diagramm / Flowchart  
-  (von wo kommt was und wohin soll es weitergeleitet werden.   
-  Controller -> Osculator -> Applicationsrechner oder Controller --> Applicationsrechner)  
-- Osculator Lizens (Sonst pausiert die App für ein paar sekunden und sendet/empfaengt nichts)  
-  http://www.osculator.net/purchase  
-  29 - 14eur  
-- Rechner für Osculator  (Mac mit Bluetooth und WiFi)  
+    
 
 ##WiiMote Links##
 - [OSCulator WiiMote Wiki](http://www.osculator.net/doc/faq:wiimote)
