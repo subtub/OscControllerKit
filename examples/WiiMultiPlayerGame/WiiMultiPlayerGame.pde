@@ -1,7 +1,11 @@
+/**
+ * WiiMultiPlayerGame
+ */
+
 import processing.core.PApplet;
 import processing.core.PVector;
-import de.fhpotsdam.io.osc.wii.NunchukButton;
-import de.fhpotsdam.io.osc.wii.WiiOsc;
+import subtub.io.osc.wii.NunchukButton;
+import subtub.io.osc.wii.WiiOsc;
 import oscP5.OscMessage;
 import oscP5.OscP5;
 
@@ -19,7 +23,6 @@ PVector cookie;
 float acc = 10;
 
 
-
 public void setup() {
   size(600, 600);
   smooth();
@@ -35,6 +38,7 @@ public void setup() {
   initLeds();
 }
 
+
 void initJoyVals(){
   joyVals = new PVector[N_PLAYERS];
   for(int i=0; i<N_PLAYERS; i++){
@@ -42,10 +46,12 @@ void initJoyVals(){
   }
 }
 
+
 void nunchukJoystickChanged(int nunchukNumber, float x, float y) {
   joyVals[nunchukNumber-1].x = map(x, 0, 1, -0.5, 0.5);
   joyVals[nunchukNumber-1].y = map(y, 0, 1, 0.5, -0.5);
 }
+
 
 void checkBoundaries(int playerNumber) {
   PVector p = playerPos[playerNumber];
@@ -62,9 +68,11 @@ public void initLeds() {
   }
 }
 
+
 public void initCookiePosition() {
   cookie = new PVector(random(0, width), random(0, height));
 }
+
 
 public void initPlayerPositions() {
   playerPos = new PVector[N_PLAYERS];
@@ -72,6 +80,7 @@ public void initPlayerPositions() {
     playerPos[i] = new PVector(random(0, width), random(0, height));
   }
 }
+
 
 public void draw() {
   background(0);
@@ -85,6 +94,7 @@ public void draw() {
   checkIfEaten();
 }
 
+
 void updatePlayerPositions(){
   for(int i=0; i<N_PLAYERS; i++){
     playerPos[i].x += acc*joyVals[i].x;
@@ -92,6 +102,7 @@ void updatePlayerPositions(){
     checkBoundaries(i);
   }
 }
+
 
 void checkIfEaten() {
   for (int i=0; i<N_PLAYERS; i++) {
@@ -103,6 +114,7 @@ void checkIfEaten() {
     }
   }
 }
+
 
 void changeLed(int wiiNumber) {
   switch(eatenCookies[wiiNumber]) {
@@ -124,6 +136,7 @@ void changeLed(int wiiNumber) {
   }
 }
 
+
 boolean samePosition(PVector p1, PVector p2) {
   if (round(p1.x) == round(p2.x) && round(p2.x) == round(p2.x)) {
     return true;
@@ -131,10 +144,11 @@ boolean samePosition(PVector p1, PVector p2) {
   return false;
 }
 
+
 /**
- 	 * To see what's the differencne between pitch, roll, yaw and accel, have a look here:
- 	 * http://www.osculator.net/doc/faq:wiimote (-> "What are Pitch, Yaw, and Roll?")
- 	 */
+ * To see what's the differencne between pitch, roll, yaw and accel, have a look here:
+ * http://www.osculator.net/doc/faq:wiimote (-> "What are Pitch, Yaw, and Roll?")
+ */
 void nunchukSensorChanged(int nunchukNumber, float pitch, float roll, float yaw, float accel) {
   //println("Sensor data changed on Nunchuk#" + nunchukNumber + ", pitch: " + pitch + ", roll: " + roll + ", yaw: " + yaw + ", accel: " + accel);
 }
@@ -154,10 +168,10 @@ void nunchukButtonReleased(int nunchukNumber, NunchukButton button) {
 
 
 /** 
- 	 * Incoming osc message are forwarded to the oscEvent method. 
- 	 * If the message is coming from OSCulator (WIIMote / Nunchuk), 
- 	 * the functions on top are automatically called.  
- 	 */
+ * Incoming osc message are forwarded to the oscEvent method. 
+ * If the message is coming from OSCulator (WIIMote / Nunchuk), 
+ * the functions on top are automatically called.  
+ */
 public void oscEvent(OscMessage theOscMessage) {
   println("incoming osc message: " + theOscMessage.addrPattern());
   if (wiiOsc.isWiiMessage(theOscMessage)) {

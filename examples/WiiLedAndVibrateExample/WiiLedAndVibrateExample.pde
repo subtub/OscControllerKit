@@ -22,7 +22,7 @@
  * Additionally set up the correct in-and-output ports.
  */
 
-import de.fhpotsdam.io.osc.wii.WiiOsc;
+import subtub.io.osc.wii.WiiOsc;
 import oscP5.OscP5;
 
 int OSCULATOR_OUT_PORT = 9000;
@@ -38,6 +38,7 @@ WiiOsc wiiOsc;
 boolean led1, led2, led3, led4;
 boolean vibrate;
 
+
 public void setup() {
   oscP5 = new OscP5(this, OSCULATOR_OUT_PORT);
   wiiOsc = new WiiOsc(this);
@@ -46,8 +47,10 @@ public void setup() {
   wiiOsc.led(WII_NUMBER, false, false, false, false);
 }
 
+
 void draw() {
 }
+
 
 void keyPressed() {
   switch(key) {

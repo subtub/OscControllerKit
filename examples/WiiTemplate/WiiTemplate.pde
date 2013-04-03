@@ -1,8 +1,3 @@
-import de.fhpotsdam.io.osc.wii.*;
-import de.fhpotsdam.util.*;
-import oscP5.*;
-import netP5.*;
-
 /**
  * WiiTemplate
  * 
@@ -12,6 +7,12 @@ import netP5.*;
  * Basic template for using the WiiOsc class with OSCulator and a WiiMote. 
  * You can use up to four WiiMotes / Nunchuks at the same time (Maybe even more). 
  */
+
+import de.fhpotsdam.io.osc.wii.*;
+import de.fhpotsdam.util.*;
+import oscP5.*;
+import netP5.*;
+
   
 OscP5 oscP5;
 WiiOsc wiiOsc;
@@ -134,6 +135,7 @@ public void nunchukButtonReleased(int nunchukNumber, NunchukButton button){
   }
 }
 
+
 /**
  * To see what's the differencne between pitch, roll, yaw and accel, have a look here:
  * http://www.osculator.net/doc/faq:wiimote (-> "What are Pitch, Yaw, and Roll?")
@@ -141,6 +143,7 @@ public void nunchukButtonReleased(int nunchukNumber, NunchukButton button){
 public void wiimoteSensorChanged(int wiiNumber, float pitch, float roll, float yaw, float accel){
   //println("Sensor data changed on Wii#" + wiiNumber + ", pitch: " + pitch + ", roll: " + roll + ", yaw: " + yaw + ", accel: " + accel);
 }
+
 
 /**
  * To see what's the differencne between pitch, roll, yaw and accel, have a look here:
@@ -166,6 +169,4 @@ void oscEvent(OscMessage theOscMessage) {
     wiiOsc.process(theOscMessage);
   }
 }
-
-
 
