@@ -8,3 +8,5 @@ distribution/
 *.svn
 
 .metadata/
+
+.classpath
