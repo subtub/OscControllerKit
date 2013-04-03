@@ -2,7 +2,7 @@
 *.DS_Store
 
 # COMPILED FILES
-OscControllerKit/distribution/
+distribution/
 *.svn-base
 *.class
 *.svn
