@@ -85,3 +85,7 @@ If you like what we are doing here, you can support us with a tip on [GitTip](ht
 
 ## License  
 OscControllerKit is released under the MIT License: http://www.opensource.org/licenses/MIT    
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/subtub/osccontrollerkit/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
